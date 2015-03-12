@@ -423,7 +423,7 @@ typedef enum {
                    }
                    
                    UIImage *srcImg = [UIImage imageWithData:jpegData];
-                   UIImage *resizedImg = [CanvasCamera resizeImage:srcImg toSize:CGSizeMake(_width, _height)];
+                   UIImage *resizedImg = srcImg; //[CanvasCamera resizeImage:srcImg toSize:CGSizeMake(_width, _height)];
                    
                        
                    BOOL bRet = NO;
@@ -458,7 +458,7 @@ typedef enum {
                        // Convert to Base64 data
                        NSData *base64Data = [data base64EncodedDataWithOptions:0];
                        NSString *strData = [NSString stringWithUTF8String:[base64Data bytes]];
-                       
+                       bRet = YES;
                        [dicRet setObject:strData forKey:@"imageURI"];
                    }
                    
@@ -932,3 +932,4 @@ bail:
 }
 
 @end
+
