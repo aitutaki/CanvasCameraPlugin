@@ -93,7 +93,7 @@ cordova.define("cordova/plugin/CanvasCamera", function(require, exports, module)
         }
 
         var windowWidth = window.innerWidth;
-        var windowHeight = window.innerHeight;
+        var windowHeight = window.innerHeight - 44;
         var pixelRatio = window.devicePixelRatio || 1; /// get pixel ratio of device
 
 
